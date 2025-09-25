@@ -1,12 +1,12 @@
-﻿import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
+﻿import Header from "./Header";
+import Footer from "./Footer";
+
 export default function Layout({ children }) {
   return (
-    <div className='rr-app-shell'>
+    <div className="app-container">
       <Header />
-      <main className='rr-main rr-container'>{children}</main>
+      <main className="app-main">{children}</main>
       <Footer />
     </div>
-  )
+  );
 }

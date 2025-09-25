@@ -1,1 +1,19 @@
 ﻿body{margin:0;font-family:sans-serif;background:#f8fafc;color:#111827;}
+/* Sticky footer layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* Footer (waar nu jouw menu in zit) */
+footer {
+  background: #f8f9fa; /* of je eigen huisstijl */
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ddd;
+}
+
