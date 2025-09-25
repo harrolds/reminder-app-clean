@@ -1,10 +1,15 @@
-﻿export function registerPWA() {
-  if (!import.meta.env.PROD) return;
+﻿// src/pwa.js
+export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js').catch(err => {
-        console.warn('[PWA] SW failed:', err);
-      });
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(reg => {
+          console.log('Service Worker registered:', reg.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
     });
   }
 }
